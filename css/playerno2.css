@@ -1,0 +1,325 @@
+body {
+    font-family: 'Open-Sans', sans-serif;
+    background-color: rgba(46,43,43,1);
+    /* background-color: red; */
+    color: #eeeeee;
+}
+
+header,
+footer {
+    text-align: center;
+}
+
+.bg-style{
+    filter: grayscale(49%);
+    height: 100vh;
+    width:100vw;
+    max-width: 100%;
+    font-family: 'Open-Sans', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* transform-origin: center center 0;
+    transform: translateZ(-1px) scale(1.2); */
+}
+
+
+header p {
+    display: inline-block;
+}
+
+#list p {
+    font-size: 1.5em;
+    padding: 0;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 5vh;
+}
+
+.typewriter h1 {
+    font-size: 5rem;
+    text-shadow: 2px 4px 3px rgba(66, 42, 42, 1);
+    color: #eeeeee;
+    font-family: monospace;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #4ecca3;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .1em;
+    /* Adjust as needed */
+    animation: typing 2s steps(10, end), blink-caret .75s step-end infinite;
+}
+
+
+/* The typing effect */
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+    50% {
+        border-color: #4ecca3;
+    }
+}
+
+footer {
+    margin-bottom: 5vh;
+}
+
+.entry {
+    text-align: center;
+}
+
+#list {
+    margin: 5vh auto;
+}
+
+.heading {
+    font-family: 'Raleway', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.heading h3 {
+    cursor: pointer;
+    transition: .3s ease;
+    text-align: center;
+    font-size: 3em;
+    text-shadow: 2px 4px 3px rgba(66, 42, 42, 0.5);
+}
+
+.entry img {
+    transition: .6s ease;
+    filter: grayscale(69%);
+    cursor: pointer;
+}
+
+.entry:hover img {
+    transition: .4s ease;
+    filter: grayscale(0%);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.entry:hover h3 {
+    transition: .3s ease;
+    transform: scale(1.1, 1.1);
+    text-shadow: 2px 4px 3px rgba(66, 42, 42, 0.9);
+}
+
+@media only screen and (min-width:300px) {
+    .heading h3 {
+        font-size: 4rem;
+    }
+    .entry {
+        padding: 1.25vw;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .heading h3 {
+        font-size: 2.5em;
+    }
+    .entry {
+        padding: .85vw;
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .heading h3 {
+        font-size: 2.75rem;
+    }
+    .entry {
+        padding: .65vw;
+    }
+}
+
+@media (min-width:1200px) {
+    .heading h3 {
+        font-size: 3rem;
+    }
+    .entry {
+        padding: .45vw;
+    }
+}
+
+.content-inner {
+    display: none;
+}
+
+@media (min-width:1200px) {
+    .modal-xl {
+        transition: .5s ease;
+        max-width: 90vw;
+    }
+}
+
+.modal-body,
+.modal-header,
+.modal-footer {
+    color: #eeeeee;
+    background-color: rgba(10, 6, 7, .85);
+}
+
+.modal-body h1 {
+    font-family: 'Raleway', sans-serif;
+    /* background: -webkit-linear-gradient(45deg, rgba(239, 94, 255, .95) 0%, rgba(97, 214, 232, .95) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    text-transform: uppercase;
+    font-size: 4.25em;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-header span {
+    color: #eeeeee;
+}
+
+::-webkit-scrollbar {
+    width: .25vw;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #4ecca3;
+    border-radius: 10px;
+}
+
+
+/* 
+.modal-img {
+    background-image: linear-gradient(45deg, rgba(239, 94, 255, .1) 0%, rgba(97, 214, 232, .3) 100%), url('../img/entries/1_mc/banner1.jpg');
+    width: 80%;
+    height: 400px;
+    background-size: cover;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    /* background-image: linear-gradient(45deg, rgba(239, 94, 255, .3) 0%, rgba(97, 214, 232, .6) 100%), url(); */
+
+
+/* 
+.modal-img {
+    transition: .6s ease;
+    filter: grayscale(70%);
+}
+
+.modal-img:hover {
+    transition: .7s ease;
+    filter: grayscale(0);
+} */
+
+.modal-head {
+    margin: 0;
+    padding: 0;
+}
+
+.modal-img img {
+    width: 100%;
+    height: auto;
+}
+
+.modal-img {
+    box-sizing: border-box;
+    display: inline-block;
+    border-style: solid;
+    border-color: #eeeeee;
+    border-width: 5px;
+    /* border-width: 10px;
+    border-radius: 4px; */
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-body p {
+    margin-top: 1%;
+    font-size: 1.25em;
+}
+
+.plf {
+    margin-top: 2%;
+}
+
+.plf h5 {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+.plf img {
+    border-style: solid;
+    border-color: transparent;
+    transition: .7s ease;
+    filter: grayscale(100%);
+    padding: 15%;
+    width: 64px;
+    height: auto;
+    margin: 0;
+}
+
+.plf li:hover img {
+    border-style: solid;
+    border-color: white;
+    transition: .8s ease;
+    filter: grayscale(0);
+    background-color: rgba(10, 6, 7, .85);
+}
+
+.plf li {
+    margin: 0 .2vw;
+    display: inline-block;
+}
+
+.intro {
+    transition: 1s ease;
+    border-style: solid;
+    border-color: #eeeeee;
+    border-width: 5px 5px 5px 0;
+    background: url('../img/s.jpg');
+    background-size: contain;
+    filter: grayscale(100%);
+}
+
+.intro:hover {
+    transition: 1s ease;
+    filter: grayscale(0%);
+}
+
+.no-pad {
+    padding: 0;
+}
+
+footer {
+    font-size: 1.5em;
+    font-family: monospace;
+}
+
+footer a,
+footer a:hover {
+    text-decoration: none;
+}
+
+footer a {
+    color: #4ecca3;
+}
+
+footer a:hover {
+    color: #3ea382;
+}
